@@ -1,0 +1,206 @@
+html {
+	box-sizing: border-box;
+}
+
+footer {
+	background-color: #4985c5;
+	padding: 1em 2em 1em 2em;
+}
+
+#container_960 {
+	background-color: #f0f4f6;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 60em;
+	padding-left: 1.25em;
+	padding-right: 1.25em;
+}
+
+div.container_clearfloat {
+	overflow: auto;
+	width: 100%;
+	padding: 0.5em 0em;
+}
+
+section.sectionarticle {
+	width: 100%;
+}
+
+
+h1 {
+	font-family: arial;
+	font-size: 1.875 em;
+}
+h2 {
+    font-family: arial;
+	font-size: 1.5 em;
+}
+h3 {
+	font-family: arial;
+	font-size: 1.125 em;
+}	
+p {
+	font-size: 1 em;
+}
+
+p.footer {
+	font-size:.875em;
+	font-family: arial;
+}
+
+nav {
+}
+	
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+	font-family: arial;
+	font-style: bold;
+	bottom: 0;
+}
+
+li a:hover {
+    background-color: #B8DBF4;
+}
+
+#slider {
+	margin: 1 em;
+	width: 100%;
+	height: auto;
+}
+
+.positioned_msg {
+	background-color: blue;
+	color: white;
+	text-align: center;
+	padding: 0.5em 1em;
+}
+
+#logo {
+	display:block;
+	width:13.75em;
+	margin-left: auto;
+	margin-right: auto;
+}
+	
+
+@media screen and (min-width: 65em ) { /* this media query will kick in at 960 or higher */
+	#navlinks {
+		margin-top: 4em;
+		float:right;
+		display:inline !important; 
+		/* the !important is needed to override 
+		the inline style the javascript forces, 
+		causing the navbar not to show once X'd 
+		through the menu button*/
+	}
+	
+	.positioned_msg {
+		background-color: blue;
+		color: white;
+		position: fixed;
+		width: 16.75em;
+		padding: 0.5em 1em;
+		bottom: 6em;
+		transform: translateX(41.25em);
+	}
+	
+	#logo {
+		float: left;
+	}
+
+	section.sectionarticle {
+		display: block;
+		width: 41.25em;
+		float:left;
+	}
+	
+	aside.asidepic {
+		display: block;
+		width: 18.75 em;
+		float:left;
+	}
+}
+
+/* This media query kicks in when a screen is at a minimum width of 47.5em wide or 760 pixels.  */
+@media screen and (max-width: 65em ) and (min-width: 24em){
+	
+	aside.asidepic {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 18.75em;
+	}
+}
+
+/* This media query kicks in when a screen is at a minimum width of 47.5em wide or 760 pixels.  */
+@media screen and (max-width: 24em ) {
+	img.shrinky {
+		width:100%;
+		height:auto;
+	}
+}
+
+@media screen and (max-width: 65em ) { /* at 960 or less */
+	
+	#navlinks {
+		display: none;
+	}
+
+	/* CSS FOR MENU ********************/
+	.menu_bar_container {
+		padding: 1em;
+		display: block;
+		width:2em;
+		margin-left:auto;
+		margin-right:auto;
+		cursor: pointer;
+	}
+
+	.menu_bar_1, .menu_bar_2, .menu_bar_3 {
+		width: 35px;
+		height: 5px;
+		background-color: #333;
+		margin: 6px 0;
+		transition: 0.4s;
+	}
+
+	/* Rotate first bar */
+	.change .menu_bar_1 {
+		-webkit-transform: rotate(-225deg) translate(.5em, -.5em);
+		transform: rotate(-225deg) translate(.5em, -.5em);
+	}
+
+	/* Fade out the second bar and flick it around for funs */
+	.change .menu_bar_2 {
+		-webkit-transform: rotate(700deg) translate(1.25em, 1.125em) ;
+		transform: rotate(700deg) translate(1.825em, 3.285em) ;
+		opacity: 0;
+	}
+
+	/* Rotate last bar */
+	.change .menu_bar_3 {
+		-webkit-transform: rotate(225deg) translate(.5em, .5em);
+		transform: rotate(225deg) translate(.5em, .5em);
+	}
+
+	
+	li {
+		float: none;
+	}
+	/**************************************************************/
+}
